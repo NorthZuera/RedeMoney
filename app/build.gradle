@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.0'
+
+    defaultConfig {
+        applicationId "br.com.testes.testederecycleview"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 4
+        versionName "1.3"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile('com.mikepenz:materialdrawer:5.9.5@aar') {
+        transitive = true
+    }
+    compile 'com.android.support:appcompat-v7:26.0.0'
+    compile 'com.android.support:support-v4:26.0.0'
+
+    compile 'com.android.support:recyclerview-v7:26.0.0'
+    compile 'com.android.support:cardview-v7:26.0.0'
+
+    compile 'com.melnykov:floatingactionbutton:1.3.0'
+    compile 'com.scalified:fab:1.1.3'
+    compile 'com.github.clans:fab:1.6.4'
+
+    compile 'me.drakeet.materialdialog:library:1.3.1'
+
+    compile 'com.nispok:snackbar:2.11.+'
+
+    compile 'com.android.support:design:22.2.0'
+
+    compile 'com.facebook.fresco:fresco:1.5.0'
+}
+
